@@ -103,6 +103,7 @@ export class CreateAccountService {
         }
     }
 
+    //Verificando os dados do usuário apartir do login na aplicação, verificando se ele possue registro_
     getOneUser = async (dataBody:Partial<AccountDto>):Promise<AccountDto> => {
         try{
             //Estou buscando um usuário com base em seu email_
@@ -112,7 +113,7 @@ export class CreateAccountService {
                 }
             }));
         }catch(error){
-
+            console.log(error);
         }
     }
 }
